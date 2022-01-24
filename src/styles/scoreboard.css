@@ -1,0 +1,26 @@
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    text-align: center;
+    border: 10px solid white;
+}
+
+.scores {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    /* text-align: center; */
+}
+.game-title {
+    /* color: red; */
+    font-size: 96px;
+}
+
+.current-score {
+    /* color: green; */
+}
+
+.high-score {
+    /* color: blue; */
+}

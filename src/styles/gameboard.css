@@ -1,0 +1,16 @@
+.gameboard {
+    background-color: red;
+    padding: 30px;
+    display: grid;
+    /* place-self: center; */
+    place-items: center;
+    grid-template-columns: 0fr 0fr 0fr;
+    grid-template-rows: 0fr 0fr 0fr;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; */
+    grid-gap: 20px;
+    justify-content: center;
+    /* justify-items: center; */
+    /* align-content: space-evenly; */
+    /* align-items: center; */
+}
