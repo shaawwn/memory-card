@@ -9,6 +9,7 @@ import Card from './components/card.js';
 import uniqid from 'uniqid';
 import Scoreboard from './components/scoreboard.js';
 import Gameboard from './components/gameboard.js';
+import Modal from './components/modal.js';
 
 // Reader stack overflow https://stackoverflow.com/questions/57161839/module-not-found-error-cant-resolve-fs-in
 // const fs = require('fs')
@@ -18,6 +19,9 @@ function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0)
   const [level, setLevel] = useState(1)
+  const[modal, setModal] = useState(() => {
+    return true
+  }) 
 
   // Cards
   const imageList = getImages(100);
@@ -40,12 +44,10 @@ function App() {
 
   function updateScore() {
     setScore(score + 1)
-    // console.log("APPs score:", score)
   }
 
   function resetGame() {
     // When the player loses, reset to level 1, set current score to 0, check high score
-    console.log("Resetting game!", score, highScore)
     if(score > highScore) {
       setHighScore(score)
     }
@@ -54,22 +56,17 @@ function App() {
   }
 
   function advanceLevel() {
-    // Move up to the next level
     setLevel(prevLevel => prevLevel + 1)
   }
-  
+
   useEffect(() => {
-    // console.log("Effect")
-    // let cards = randomizeCards()
-  //   for(let i = 0; i < level; i++) {
-  //     getCardLevelPool(level)
-  //     // setCurrentCards(randomizeCards(level))
-  // }
+
   }, [])
 
   return (
 
     <div className="App">
+      <Modal />
       <Scoreboard current={score} high={highScore} currentLevel={level}/>
       <Gameboard currentLevel={level} updateScore={updateScore} resetGame={resetGame} cards={cardLevelPool} advanceLevel={advanceLevel} />
 

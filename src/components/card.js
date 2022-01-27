@@ -15,6 +15,7 @@ const Card = (props) => {
     }
 
     function parseId(source) {
+        console.log("PARSE", source)
         let rawId = source.split('/')[3]
         return rawId.split('.')[0]
     }

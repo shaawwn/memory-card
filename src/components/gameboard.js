@@ -41,26 +41,10 @@ const Gameboard = (props) => {
         setCardLevelPool(cardLevelPool.concat(cardPool))
     }
 
-    function addCardsToBoard() {
-        // using the card pool, select 9 random cards and place them randomly on the board
-        // given cardPool.length, select 9 random integers and use those returns to get random cards
-        // let cards = 
-        console.log("In gameboard", props.cards)
-        let cards = props.cards
-        cards.map((img, i) => {
-            try {
-                let newImage =  images(img)
-                return <Card image={newImage} key={uniqid()} class={i} onClick={handleClick} />
-            } catch {
-                console.log("No such image")
-            }
-            })
-        // return cards
-    }
-
-
     function randomizeCards(level) {
-        const numCards = 9 * level
+        // Need to ensure at least 1 not selected card is put into the board
+        console.log("clicked cards in randomize", clickedCards)
+        // const numCards = 9 * level
         let randomCards = []
         let alreadyChosen = []
         for(let i = 1; i < 10; i++) {
@@ -75,12 +59,10 @@ const Gameboard = (props) => {
             alreadyChosen.push(randomCard)
             randomCards.push(cardLevelPool[randomCard]);
         }
-        // console.log("Random cards", randomCards)
         return randomCards
     }
     function handleClick(cardID) {
         // Change the score, set card state (set state in card component)
-        // console.log("GB: Card is clicked", cardID)
         if(clickedCards.includes(cardID)) {
             // Reset game to level 1, clear out clicked cards
             alert("Game over man!")
