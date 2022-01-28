@@ -17,12 +17,9 @@ const Card = (props) => {
     function parseId(source) {
         console.log("PARSE", source)
         let rawId = source.split('/')[3]
+        console.log(rawId.split('.')[0])
         return rawId.split('.')[0]
     }
-    // useEffect(() => {
-    //     // setClicked(false)
-    //     // console.log("Card has been clicked", clicked)
-    // }, [clicked])
 
     return(
         <div className="card" onClick={clickCard}>
