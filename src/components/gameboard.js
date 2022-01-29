@@ -43,7 +43,7 @@ const Gameboard = (props) => {
 
     function randomizeCards(level) {
         // Need to ensure at least 1 not selected card is put into the board
-        console.log("clicked cards in randomize", clickedCards)
+        // console.log("clicked cards in randomize", clickedCards)
         // const numCards = 9 * level
         let randomCards = []
         let alreadyChosen = []
@@ -57,8 +57,9 @@ const Gameboard = (props) => {
                 }
             }
             alreadyChosen.push(randomCard)
-            randomCards.push(cardLevelPool[randomCard]);
+            randomCards.push(cardLevelPool[randomCard]); // Try to include at least ONE card that hasn't already been chosen
         }
+        // console.log("RANDOM CARDS", randomCards, cardLevelPool, clickedCards)
         return randomCards
     }
     function handleClick(cardID) {
@@ -73,7 +74,7 @@ const Gameboard = (props) => {
         setClickedCards(
             clickedCards.concat([cardID])
         )
-        console.log(clickedCards)
+        // console.log(clickedCards)
         props.updateScore()
     }
 

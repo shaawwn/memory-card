@@ -14,9 +14,9 @@ const Card = (props) => {
         setClicked(false)
     }
 
-    function parseId(source) {
+    function parseId(source) { // 
         console.log("PARSE", source)
-        let rawId = source.split('/')[3]
+        let rawId = source.split('/')[4]
         console.log(rawId.split('.')[0])
         return rawId.split('.')[0]
     }

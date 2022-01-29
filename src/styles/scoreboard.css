@@ -1,9 +1,14 @@
+@import url('http://fonts.cdnfonts.com/css/new-super-mario-font-u');
+
+
 .scoreboard {
     display: flex;
     flex-direction: column;
     /* width: 100%; */
     text-align: center;
     border: 10px solid white;
+    font-family: 'New Super Mario Font U', sans-serif;
+                                                
 }
 
 .scores {

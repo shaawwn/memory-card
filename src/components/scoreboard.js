@@ -16,7 +16,7 @@ const Scoreboard = (props) => {
 
     return (
         <div className="scoreboard">
-            <h1 className="game-title">Memory Game</h1>
+            <h1 className="game-title">Super Memory Game!</h1>
             <h2 className="current-level">Level {level}</h2>
             <div className="scores">
                 <h1 className="current-score">Current Score: {currentScore}</h1>
