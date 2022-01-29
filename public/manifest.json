@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Super Memory Game",
+  "name": "Super Memory Game",
   "icons": [
     {
       "src": "favicon.ico",
