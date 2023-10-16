@@ -6,7 +6,7 @@ const Card = (props) => {
 
     function clickCard(e) {
         e.stopPropagation() // To prevent element behind card form also being clicked
-        console.log(e.target.id)
+        // console.log(e.target.id)
         props.onClick(parseId(e.target.id)) // Something here is causing state not to change
     }
 
@@ -15,8 +15,8 @@ const Card = (props) => {
     }
 
     function parseId(source) { // 
-        console.log("PARSE", source)
-        let rawId = source.split('/')[4]
+        // console.log("PARSE", source)
+        let rawId = source.split('/')[4] // When built, creates media folder, meaning [3] -> [4]
         console.log(rawId.split('.')[0])
         return rawId.split('.')[0]
     }

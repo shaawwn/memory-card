@@ -18,7 +18,7 @@ function App() {
 
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0)
-  const [level, setLevel] = useState(2)
+  const [level, setLevel] = useState(1)
   const[modal, setModal] = useState(() => {
     return true
   }) 
